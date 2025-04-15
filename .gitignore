@@ -1,0 +1,13 @@
+# Système
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Env
+.env
+.env.local

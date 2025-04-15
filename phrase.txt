@@ -1,0 +1,49 @@
+ALGORITHME analyse_sentence
+
+    VARIABLE
+        phrase : chaine;
+        check : caractère;
+        longueur, nbMots, nbVoyelles, i : entier;
+        voyelles : TABLEAU[1..12] DE CARACTERE;
+
+    DEBUT
+        ECRIRE ("Entrer une phrase svp")
+        LIRE (phrase)
+
+        longueur := LONGUEUR(phrase)
+
+        nbMots := 1
+
+        nbVoyelles := 0
+
+        voyelles[1] := 'a';
+        voyelles[2] := 'e';
+        voyelles[3] := 'i';
+        voyelles[4] := 'o';
+        voyelles[5] := 'u';
+        voyelles[6] := 'y';
+        voyelles[7] := 'A';
+        voyelles[8] := 'E';
+        voyelles[9] := 'I';
+        voyelles[10] := 'O';
+        voyelles[11] := 'U';
+        voyelles[12] := 'Y';
+
+        POUR i <- 1 à longueur FAIRE
+            check := phrase[i]
+            si (check = " ") ALORS
+                nbMots := nbMots + 1
+            FINSI
+
+            POUR i <- 1 à 12 FAIRE
+                si (check = voyelles[i]) ALORS
+                    nbVoyelles := nbVoyelles + 1
+                FINSI
+            FINPOUR
+        FINPOUR
+
+        ECRIRE ("La longueur de la phrase est ", longueur)
+        ECRIRE ("Le nombre de mot est ", nbMots)
+        ECRIRE ("Le nombre de voyelle est ", nbVoyelles)
+
+    FIN    
