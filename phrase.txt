@@ -3,7 +3,7 @@ ALGORITHME analyse_sentence
     VARIABLE
         phrase : chaine;
         check : caractère;
-        longueur, nbMots, nbVoyelles, i : entier;
+        longueur, nbMots, nbVoyelles, i, j : entier;
         voyelles : TABLEAU[1..12] DE CARACTERE;
 
     DEBUT
@@ -35,8 +35,8 @@ ALGORITHME analyse_sentence
                 nbMots := nbMots + 1
             FINSI
 
-            POUR i <- 1 à 12 FAIRE
-                si (check = voyelles[i]) ALORS
+            POUR j <- 1 à 12 FAIRE
+                si (check = voyelles[j]) ALORS
                     nbVoyelles := nbVoyelles + 1
                 FINSI
             FINPOUR
